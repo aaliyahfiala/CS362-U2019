@@ -6,13 +6,20 @@
 char inputChar()
 {
     // TODO: rewrite this function
-    return ' ';
+	char c = rand() % (126 - 32) + 32;	
+    return c;
 }
 
 char *inputString()
 {
     // TODO: rewrite this function
-    return "";
+	char *s = malloc(sizeof(char)*6);
+	for (int i = 0; i < 5; i++) {
+		s[i] = rand() % (118 - 100) + 100;
+	}	
+
+	s[5] = '\0';	
+    return s;
 }
 
 void testme()
